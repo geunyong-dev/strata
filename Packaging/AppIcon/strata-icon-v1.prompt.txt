@@ -1,0 +1,6 @@
+Generation mode: built-in image_gen
+transparent_background: true
+
+Use case: logo-brand.
+Asset type: production macOS app icon for Strata, a native disk-storage analysis app whose identity is geological strata and core samples.
+Create one exquisitely simple sculpted icon on a square 1024x1024 canvas: a dark basalt rounded-square tile with a single bold centered geological core motif, three broad gently curved horizontal mineral layers forming a compact vertical rounded core. The layers are glacier cyan #87C8D2, muted sage #93AC8C, and a restrained warm amber #D9A356, with subtle bevels and a soft dimensional top face. Dark tile #15191A, softly illuminated edges, understated premium satin material, clean precise geometry. The core fills most of the tile's central area and is immediately recognizable at 32 pixels. Front-facing tile with very subtle depth in the core, balanced proportions and generous breathing room. Tile occupies about 88% of the canvas with equal outer margins. Transparent outside the rounded tile, genuine alpha, no opaque outer background. One icon only, no presentation mockup, no text, no letters, no labels, no borders around the canvas, no watermark, no disk drive or broom or trash can, no fine grain or tiny decorative details.

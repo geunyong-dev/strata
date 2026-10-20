@@ -5,11 +5,11 @@
 저장소 루트에서 `bash scripts/package-local.sh`를 실행한다. 기본 결과는 숨김 폴더가 아닌 `dist/Strata.app`이다. 기존 결과가 있으면 덮어쓰지 않고 중단한다. 새 결과 경로는 절대 경로로 전달할 수 있다.
 
 - Release 구성으로 현재 Mac 아키텍처를 빌드한다.
-- macOS 14 이상, 버전 0.1.0 / 빌드 7.
+- macOS 14 이상, 버전 0.1.0 / 빌드 8.
 - 기존 로컬 앱 식별자 `local.strata.design-review`를 유지한다.
 - 실행 파일을 복사한 다음 Info.plist를 포함한 앱 번들 전체를 ad-hoc 서명하고 검증한다.
 - 외부 배포용 Developer ID 서명·공증은 하지 않는다. 다른 Mac 배포용이 아니다.
-- 별도 앱 아이콘은 아직 포함하지 않는다.
+- 지층·코어 시료 형태의 전용 앱 아이콘을 포함한다. 원본은 `Packaging/AppIcon/strata-icon-v1.png`, 패키징용은 `Packaging/AppIcon/Strata-v1.icns`이며, 번들의 `Contents/Resources/Strata.icns`와 `CFBundleIconFile`로 연결한다.
 - `Contents/Helpers/StrataReadOnlyScanner`를 별도 서명한 뒤 번들 전체를 서명한다. 도구를 시스템에 설치하거나 상주시킬 필요는 없다.
 
 ## 관리자 정밀 검사

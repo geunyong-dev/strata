@@ -13,6 +13,7 @@ if [[ -e "$output_path" || -L "$output_path" ]]; then
     exit 1
 fi
 cd "$project_root"
+test -f "$project_root/Packaging/AppIcon/Strata-v1.icns"
 swift build -c release
 binary_directory="$(swift build -c release --show-bin-path)"
 test -x "$binary_directory/Strata"
@@ -22,9 +23,11 @@ staging_directory="$(mktemp -d "$(dirname "$output_path")/.strata-package.XXXXXX
 bundle_path="$staging_directory/Strata.app"
 mkdir -p "$bundle_path/Contents/MacOS"
 mkdir -p "$bundle_path/Contents/Helpers"
+mkdir -p "$bundle_path/Contents/Resources"
 cp "$binary_directory/Strata" "$bundle_path/Contents/MacOS/Strata"
 cp "$binary_directory/StrataReadOnlyScanner" "$bundle_path/Contents/Helpers/StrataReadOnlyScanner"
 cp "$project_root/Packaging/Info.plist" "$bundle_path/Contents/Info.plist"
+cp "$project_root/Packaging/AppIcon/Strata-v1.icns" "$bundle_path/Contents/Resources/Strata.icns"
 /usr/bin/plutil -lint "$bundle_path/Contents/Info.plist"
 /usr/bin/codesign --force --sign - --identifier local.strata.read-only-scanner "$bundle_path/Contents/Helpers/StrataReadOnlyScanner"
 /usr/bin/codesign --force --sign - --identifier local.strata.design-review "$bundle_path"
