@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Swift Package Manager / Xcode
+/.build
+/.swiftpm
+xcuserdata/
+DerivedData/
+*.xcuserstate
+
+# Local build outputs (ad-hoc signed app bundles)
+/dist
+*.app
+
+# Local scan logs / diagnostics
+*.jsonl
+*.log
+
+# Editor / env
+.vscode/
+.idea/
+.env
+.env.*
